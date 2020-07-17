@@ -1,5 +1,3 @@
-
-
 // Feet to Mile
 // ==============
 
@@ -34,7 +32,7 @@ function woodCalculator(chair, table, bed) {
     return totalWood;
   } else {
     return 'Invalid Input'
- }
+  }
 }
 
 var getTotalWood = woodCalculator(19, 30, 40);
@@ -50,18 +48,18 @@ function brickCalculator(buildingStories) {
   const bricksNeedPerFeet = 1000;
   if (1 <= buildingStories && buildingStories <= 10) {
     var storiesSize = buildingStories * 15;
-    var  bricksIs = storiesSize * bricksNeedPerFeet;
+    var bricksIs = storiesSize * bricksNeedPerFeet;
     return bricksIs;
-    
-    
+
+
   } else if (11 <= buildingStories && buildingStories <= 20) {
     buildingStories = Math.abs((buildingStories - 10));
     storiesSize = buildingStories * 12;
-    bricksIs = storiesSize * bricksNeedPerFeet; 
+    bricksIs = storiesSize * bricksNeedPerFeet;
     var total = bricksIs + 150000;
     return total;
-    
-  
+
+
   } else if (buildingStories >= 21) {
     buildingStories = Math.abs((buildingStories - 20));
     storiesSize = buildingStories * 10;
@@ -74,4 +72,26 @@ function brickCalculator(buildingStories) {
 }
 
 const getBricks = brickCalculator();
-console.log(getBricks)
+console.log(getBricks);
+
+
+
+// Find the smallest friend name in an Array (tinyFriend)
+// ========================================================
+
+
+var names = ['Naiem', 'Farhan', 'Fahim'];
+
+function tinyFriend(names) {
+  var smallestName = names[0];
+  for (var i = 0; i < names.length; i++) {
+    if (names[i].length < smallestName.length) {
+      smallestName = names[i];
+    }
+  }
+
+  return smallestName;
+}
+
+var getSmallestName = tinyFriend(names);
+console.log(getSmallestName)
